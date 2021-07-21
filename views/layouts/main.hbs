@@ -1,48 +1,16 @@
 <html lang='en'>
-   <head>
-			<meta charset='utf-8' />
-			<title>Instadrop - Welcome Admin</title>
-			<meta
-					name='viewport'
-					content='width=device-width, initial-scale=1, shrink-to-fit=no'
-			/>
-			<meta content='InstaDrop Admin page' name='description' />
-			<meta content='MyraStudio' name='author' />
-			<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+  {{> page-head }}
+  <body>
+		<div id="layout-wrapper">
+			{{> header }}
+			{{> sidebar  }}
+			<main class="main-content">
 
-			<link rel='shortcut icon' href='/images/favicon.ico' />
+				{{{body}}}
 
-			<link href='/css/bootstrap.min.css' rel='stylesheet' type='text/css' />
-			<link href='/css/icons.min.css' rel='stylesheet' type='text/css' />
-			<link href='/css/theme.min.css' rel='stylesheet' type='text/css' />
-		</head>
-    <body>
-			<div id="layout-wrapper">
-				{{> header }}
-				{{> sidebar  }}
-				<main class="main-content">
-
-					{{{body}}}
-
-					{{> footer }}
-				</main>
-			</div>
-
-
-			<div class="menu-overlay"></div>
-
-			<script src="/js/jquery.min.js"></script>
-			<script src="/js/bootstrap.bundle.min.js"></script>
-			<script src="/js/metismenu.min.js"></script>
-			<script src="/js/waves.js"></script>
-			<script src="/js/simplebar.min.js"></script>
-
-			<script src="/plugins/morris-js/morris.min.js"></script>
-
-			<script src="/plugins/raphael/raphael.min.js"></script>
-
-			<script src="/pages/dashboard-demo.js"></script>
-
-			<script src="/js/theme.js"></script>
-    </body>
+				{{> footer }}
+			</main>
+		</div>
+		{{> page-scripts }}
+  </body>
 </html>

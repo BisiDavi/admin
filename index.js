@@ -17,6 +17,13 @@ app.use(express.static('public'));
 
 app.use('/', appRoutes);
 
+app.use((req, res, next) => {
+    if (res.status(404)) {
+        res.render('404', { layout: 'error' });
+    } else {
+        res.render('500', { layout: 'error' });
+    }
+});
 
 app.listen(3000, () => {
     console.log('Server is running on port 3000');
