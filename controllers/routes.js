@@ -14,16 +14,16 @@ function authView(route, fileName) {
 }
 
 getView('/', 'index', 'Dashboard');
-getView('/active-orders', 'active-orders', 'Active Orders');
+getView('/active-trips', 'active-orders', 'Active Trips');
 getView('/create-profile', 'create-profiles', 'Create Profiles');
-getView('/create-orders', 'create-orders', 'Create Orders');
+getView('/create-trips', 'create-orders', 'Create Trips');
 getView('/dispatcher-list', 'dispatcher-list', 'Dispatchers List');
 getView('/orders-history', 'orders-history', 'Orders History');
-getView('/orders-status', 'orders-status', 'Orders Status');
+getView('/admin-list', 'admin-list', 'Admin List');
+getView('/store-list', 'store-list', 'Store List');
 
 authView('/login', 'login');
 authView('/register', 'register');
 authView('/recover-password', 'recover-password');
-
 
 module.exports = router;

@@ -1,14 +1,11 @@
 <div class='container-fluid'>
     <div class='row'>
         <div class='col-12'>
-            <div style='height:50vh;' class='create-order position-relative'>
+            <div style='height:80vh;' class='create-order position-relative'>
                 <div class='card'>
-                    <div
-                        style='display: flex;justify-content: center;align-items: center;'
-                        class='card-title position-relative'
-                    >
-                    </div>
                     <div class='card-body'>
+                        <h4 class='card-title'></h4>
+                        <p class='card-subtitle mb-4'></p>
                         <table
                             id='state-saving-datatable'
                             class='table activate-select dt-responsive nowrap'
@@ -16,16 +13,12 @@
                             <thead>
                                 <tr>
                                     <th>S/N</th>
-                                    <th>Date</th>
-                                    <th>Order Number</th>
-                                    <th>Pickup</th>
-                                    <th>Destination</th>
-                                    <th>Number of Destination</th>
-                                    <th>Time Created</th>
-                                    <th>Time Accepted</th>
-                                    <th>Dispatcher Name</th>
-                                    <th>Time Delivered</th>
-                                    <th>Duration</th>
+                                    <th>Store Name</th>
+                                    <th>Address</th>
+                                    <th>Phone Number </th>
+                                    <th> Edit </th>
+                                    <th> Delete </th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -34,29 +27,40 @@
                                     <td>Sales Assistant</td>
                                     <td>New York</td>
                                     <td>46</td>
-                                    <td>2011/12/06</td>
-                                    <td>$145,600</td>
-                                    <td>Cole</td>
-                                    <td>8:30 am 20/05/21</td>
+                                    <td><button
+                                            class='btn btn-success'
+                                        >Edit</button></td>
+                                    <td
+                                        style='display:block !important;'
+                                    ><button
+                                            class='btn btn-danger'
+                                        >Delete</button></td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
                                     <td>Sales Assistant</td>
                                     <td>New York</td>
                                     <td>46</td>
-                                    <td>2011/12/06</td>
-                                    <td>$145,600</td>
-                                    <td>Cole</td>
-                                    <td>8:30 am 20/05/21</td>
+                                    <td><button
+                                            class='btn btn-success'
+                                        >Edit</button></td>
+                                    <td
+                                        style='display:block !important;'
+                                    ><button
+                                            class='btn btn-danger'
+                                        >Delete</button></td>
+                                    <td></td>
+
                                 </tr>
                             </tbody>
                         </table>
 
                         <div
-                            class='modal fade bd-availableOrders-modal-lg'
+                            class='modal fade bd-example-modal-lg'
                             tabindex='-1'
                             role='dialog'
-                            aria-labelledby='availableOrders'
+                            aria-labelledby='myLargeModalLabel'
                             aria-hidden='true'
                         >
                             <div class='modal-dialog modal-lg' role='document'>
@@ -64,8 +68,8 @@
                                     <div class='modal-header'>
                                         <h5
                                             class='modal-title text-center w-100'
-                                            id='createOrders'
-                                        >Create Orders</h5>
+                                            id='exampleModalLabel'
+                                        >Store List</h5>
                                         <button
                                             type='button'
                                             class='close waves-effect waves-light'
@@ -82,45 +86,44 @@
                                             <div class='form-row my-3'>
                                                 <div class='col-12'>
                                                     <label
-                                                        for='pickupOrdrer'
-                                                    >Pickup</label>
+                                                        for='vendorName'
+                                                    >Vendor Name</label>
                                                     <input
                                                         type='text'
                                                         class='form-control'
-                                                        id='pickupOrdrer'
-                                                        placeholder='Pickup'
+                                                        id='vendorName'
+                                                        placeholder='Vendor Name'
                                                         value=''
                                                     />
                                                 </div>
                                             </div>
                                             <div class='form-row my-3'>
                                                 <div class='col-12'>
-                                                    <label
-                                                        for='orderDestination'
-                                                    > Destination</label>
+                                                    <label for='address'>
+                                                        Address</label>
                                                     <input
                                                         type='text'
                                                         class='form-control'
-                                                        id='orderDestination'
-                                                        placeholder='Destination'
+                                                        id='address'
+                                                        placeholder='Address'
                                                         value=''
                                                     />
                                                 </div>
                                             </div>
                                             <div class='form-row my-3'>
                                                 <div class='col-12'>
-                                                    <label
-                                                        for='numberofDestination'
-                                                    >Number of Destination</label>
+                                                    <label for='phoneNumber'>
+                                                        Phone Number</label>
                                                     <input
                                                         type='text'
                                                         class='form-control'
-                                                        id='numberofDestination'
-                                                        placeholder='Number of Destination'
+                                                        id='phoneNumber'
+                                                        placeholder='Phone Number'
                                                         value=''
                                                     />
                                                 </div>
                                             </div>
+
                                         </form>
                                     </div>
                                     <div class='modal-footer'>
@@ -139,7 +142,16 @@
                         </div>
                     </div>
                 </div>
+                <button
+                    style='border-radius:50%;padding:20px;right:30px;bottom:30px;'
+                    class='btn btn-warning waves-effect waves-light position-absolute'
+                    data-toggle='modal'
+                    data-target='.bd-example-modal-lg'
+                >
+                    <i class='bx bx-plus bx-2'></i>
+                </button>
             </div>
         </div>
+
     </div>
 </div>
