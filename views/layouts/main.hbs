@@ -5,12 +5,17 @@
 			{{> header }}
 			{{> sidebar  }}
 			<main class="main-content">
-
+				<div class="page-content">
 				{{{body}}}
+				</div>
 
 				{{> footer }}
 			</main>
 		</div>
+		{{#> scripts-block }}
+
 		{{> page-scripts }}
+
+		{{/ scripts-block }}
   </body>
 </html>
