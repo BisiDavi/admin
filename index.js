@@ -3,6 +3,8 @@ const exphbs = require('express-handlebars');
 const appRoutes = require('./controllers/routes');
 const app = express();
 
+const PORT = process.env.PORT || 3000;
+
 app.engine(
     '.hbs',
     exphbs({
@@ -25,6 +27,6 @@ app.use((req, res, next) => {
     }
 });
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log('Server is running on port 3000');
 });
