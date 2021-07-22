@@ -7,15 +7,20 @@
                 </span>
             </a>
         </div>
-        <form class='p-2'>
+        <form
+            method='post'
+            action='https://cloudmall-instadrop-admin-api.herokuapp.com/api/v1/login'
+            class='p-2'
+        >
             <h4 class='text-center mb-4'>Sign in to your account</h4>
             <div class='form-group'>
                 <label for='emailaddress'>Email address</label>
                 <input
                     class='form-control'
                     type='email'
+                    name='email'
                     id='emailaddress'
-                    required=''
+                    required
                     placeholder='john@deo.com'
                 />
             </div>
@@ -28,10 +33,10 @@
                 <input
                     class='form-control'
                     type='password'
-                    required=''
+                    name='password'
+                    required
                     id='password'
                     placeholder='Enter your password'
-                    p
                 />
             </div>
 
